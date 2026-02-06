@@ -126,6 +126,36 @@ footer { background: #0b1120; color: #9ca3af; padding: 80px 0 30px; font-size: 0
 @media (max-width: 900px) {
     .nav-links, .cta-header { display: none; }
     .menu-toggle { display: block; }
+    
+    /* Mobiilivalikko aktiivisena */
+    .nav-container.active .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.98);
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        gap: 20px;
+        backdrop-filter: blur(10px);
+    }
+    
+    .nav-container.active .cta-header {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(90px + 200px);
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.98);
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        gap: 15px;
+        backdrop-filter: blur(10px);
+    }
+    
     .contact-container { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2.5rem; }
 }
